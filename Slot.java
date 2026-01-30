@@ -35,4 +35,7 @@ public class Slot {
     public void setFloorNo(int floorNo) {
         this.floorNo = floorNo;
     }
+    public void setType(Type type) {
+        this.type = type;
+    }
 }
