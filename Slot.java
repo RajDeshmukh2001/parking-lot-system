@@ -1,9 +1,9 @@
 public class Slot {
     private int id;
-    public enum Type {
+    public enum Size {
     SMALL, MEDIUM, LARGE
 }
-    private Type type;
+    private Size size;
     private int floorNo;
     private boolean occupied;
     private String vehicleId;
@@ -11,8 +11,8 @@ public class Slot {
     public int getId() {
         return id;
     }
-    public Type getType() {
-        return type;
+    public Size getSize() {
+        return size;
     }
     public int getFloorNo() {
         return floorNo;
@@ -35,7 +35,7 @@ public class Slot {
     public void setFloorNo(int floorNo) {
         this.floorNo = floorNo;
     }
-    public void setType(Type type) {
-        this.type = type;
+    public void setSize(Size size) {
+        this.size = size;
     }
 }
