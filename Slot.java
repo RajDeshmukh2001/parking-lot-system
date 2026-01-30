@@ -29,5 +29,7 @@ public class Slot {
     public void setOccupied(boolean occupied) {
         this.occupied = occupied;
     }
-    
+    public void setId(int id) {
+        this.id = id;
+    }
 }
