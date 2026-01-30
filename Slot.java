@@ -32,4 +32,7 @@ public class Slot {
     public void setId(int id) {
         this.id = id;
     }
+    public void setFloorNo(int floorNo) {
+        this.floorNo = floorNo;
+    }
 }
