@@ -19,5 +19,8 @@ public abstract class Vehicle {
     public void setRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
     }
+    public void setInTimeStamp(String inTimeStamp) {
+        this.inTimeStamp = java.time.LocalDateTime.now().toString();
+    }
 
 }
