@@ -23,5 +23,7 @@ public class Slot {
     public String getVehicleId() {
         return vehicleId;
     }
-    
+    public void setVehicleId(String vehicleId) {
+        this.vehicleId = vehicleId;
+    }
 }
