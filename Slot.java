@@ -20,5 +20,8 @@ public class Slot {
     public boolean isOccupied() {
         return occupied;
     }
+    public String getVehicleId() {
+        return vehicleId;
+    }
     
 }
