@@ -25,5 +25,8 @@ public abstract class Vehicle {
     public String getId() {
         return id;
     }
+    public String getRegistrationNumber() {
+        return registrationNumber;
+    }
 
 }
