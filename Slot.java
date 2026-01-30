@@ -26,4 +26,8 @@ public class Slot {
     public void setVehicleId(String vehicleId) {
         this.vehicleId = vehicleId;
     }
+    public void setOccupied(boolean occupied) {
+        this.occupied = occupied;
+    }
+    
 }
