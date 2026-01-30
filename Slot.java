@@ -1,7 +1,7 @@
 public class Slot {
     private String id;
     private SlotSize size;
-    private int floorNo;
+    private String floorNumber;
     private boolean occupied;
     private String vehicleId;
     
@@ -11,8 +11,8 @@ public class Slot {
     public SlotSize getSize() {
         return size;
     }
-    public int getFloorNo() {
-        return floorNo;
+    public String getFloorNumber() {
+        return floorNumber;
     }
     public boolean isOccupied() {
         return occupied;
@@ -29,8 +29,8 @@ public class Slot {
     public void setId(String id) {
         this.id = id;
     }
-    public void setFloorNo(int floorNo) {
-        this.floorNo = floorNo;
+    public void setFloorNumber(String floorNumber) {
+        this.floorNumber = floorNumber;
     }
     public void setSize(SlotSize size) {
         this.size = size;
