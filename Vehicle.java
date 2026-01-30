@@ -34,5 +34,7 @@ public abstract class Vehicle {
     public String getOutTimeStamp() {
         return outTimeStamp;
     }
-
+    public String getSlotId() {
+        return slotId;
+    }
 }
