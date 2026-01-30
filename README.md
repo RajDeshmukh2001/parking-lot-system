@@ -65,3 +65,15 @@ Unparking: When a vehicle leaves, release the spot and calculate the fee.
 
 ### 8. Scope
 - One user manages one parking lot
+
+## Language
+- Java (JDK 17 LTS or later)
+
+## How to run the program
+1. Clone the repository
+2. Compile the project
+3. Run the `Main` class
+4. Follow the CLI instructions
+
+## Branching strategy:
+- GitHub Flow Strategy (main branch and feature branches)
