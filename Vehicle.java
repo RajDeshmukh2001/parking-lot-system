@@ -4,7 +4,7 @@ public abstract class Vehicle {
     private String inTimeStamp; 
     private String outTimeStamp; 
     private String slotId; 
-    
+
     public Vehicle(String id, String registrationNumber) { 
         this.id = id; 
         this.registrationNumber = registrationNumber; 
@@ -12,4 +12,9 @@ public abstract class Vehicle {
         this.outTimeStamp = null; 
         this.slotId = null;
     }
+
+    public void setOutTimeStamp(String outTimeStamp) {
+        this.outTimeStamp = outTimeStamp;
+    }
+    
 }
