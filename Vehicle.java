@@ -28,5 +28,8 @@ public abstract class Vehicle {
     public String getRegistrationNumber() {
         return registrationNumber;
     }
+    public String getInTimeStamp() {
+        return inTimeStamp;
+    }
 
 }
