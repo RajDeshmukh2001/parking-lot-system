@@ -22,5 +22,8 @@ public abstract class Vehicle {
     public void setInTimeStamp(String inTimeStamp) {
         this.inTimeStamp = java.time.LocalDateTime.now().toString();
     }
+    public String getId() {
+        return id;
+    }
 
 }
