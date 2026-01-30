@@ -1,15 +1,20 @@
+import java.time.LocalDateTime;
+
 public abstract class Vehicle {
     private String id;
     private String registrationNumber; 
-    private String inTimeStamp; 
-    private String outTimeStamp; 
+    private LocalDateTime inTimeStamp; 
+    private LocalDateTime outTimeStamp; 
     private String slotId; 
 
     public Vehicle(String id, String registrationNumber, String slotId) {
         this.id = id;
         this.registrationNumber = registrationNumber;
         this.slotId = slotId;
-        this.inTimeStamp = java.time.LocalDateTime.now().toString();
+        this.inTimeStamp = LocalDateTime.now();
+    }
+    public void setOutTimeStamp(LocalDateTime outTimeStamp) {
+        this.outTimeStamp = outTimeStamp;
     }
     public String getId() {
         return id;
@@ -17,10 +22,10 @@ public abstract class Vehicle {
     public String getRegistrationNumber() {
         return registrationNumber;
     }
-    public String getInTimeStamp() {
+    public LocalDateTime getInTimeStamp() {
         return inTimeStamp;
     }
-    public String getOutTimeStamp() {
+    public LocalDateTime getOutTimeStamp() {
         return outTimeStamp;
     }
     public String getSlotId() {
