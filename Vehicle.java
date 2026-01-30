@@ -16,4 +16,8 @@ public abstract class Vehicle {
         this.id = id;
     }
 
+    public void setRegistrationNumber(String registrationNumber) {
+        this.registrationNumber = registrationNumber;
+    }
+
 }
