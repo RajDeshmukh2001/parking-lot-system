@@ -29,6 +29,7 @@ public class Main {
                     return;
 
                 default:
+                    System.out.println("Exiting system!");
                     break;
             }
 
