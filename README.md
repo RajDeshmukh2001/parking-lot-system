@@ -19,3 +19,61 @@ Cars can park in Medium or Large spots.
 Parking Strategy: When a vehicle enters, assign the first available spot starting from Floor 1.
 Unparking: When a vehicle leaves, release the spot and calculate the fee.
 (SMALL:100,MEDIUM:150,LARGE:200) PER HOUR NEED TO BE DYNAMIC
+
+## Requirements
+
+### 1. Interface
+- Command Line Interface (CLI)
+- Single user manages one parking lot
+
+### 2. Parking Lot Structure
+- Multi-floor parking lot
+- Configurable number of floors (N)
+- Configurable number of slots per floor (M)
+- Slot sizes:
+  - Small (S)
+  - Medium (M)
+  - Large (L)
+
+### 3. Vehicle Types
+- Bike → Slot Type: Small (S)
+- Car → Slot Type: Medium (M), Large (L)
+- Truck → Slot Type: Large (L)
+
+### 4. Parking Rules
+- First Come First Serve (FCFS)
+- Parking starts from Floor 1 and proceeds upward
+- First available compatible slot is assigned
+
+### 5. Vehicle Exit
+- Slot is freed when vehicle leaves
+- Parking fee is calculated on exit
+
+### 6. Fees (per hour)
+- Small (S): 100
+- Medium (M): 150
+- Large (L): 200
+
+### 7. Core Actors
+- Vehicle
+- Slot
+- Parking Lot
+
+## Entities
+- Vehicle
+- Slot
+
+### 8. Scope
+- One user manages one parking lot
+
+## Language
+- Java (JDK 17 LTS or later)
+
+## How to run the program
+1. Clone the repository
+2. Compile the project
+3. Run the `Main` class
+4. Follow the CLI instructions
+
+## Branching strategy:
+- GitHub Flow Strategy (main branch and feature branches)
