@@ -31,5 +31,8 @@ public abstract class Vehicle {
     public String getInTimeStamp() {
         return inTimeStamp;
     }
+    public String getOutTimeStamp() {
+        return outTimeStamp;
+    }
 
 }
