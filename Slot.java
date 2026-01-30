@@ -14,5 +14,8 @@ public class Slot {
     public Type getType() {
         return type;
     }
+    public int getFloorNo() {
+        return floorNo;
+    }
 
 }
