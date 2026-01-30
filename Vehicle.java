@@ -16,5 +16,8 @@ public abstract class Vehicle {
     public void setOutTimeStamp(String outTimeStamp) {
         this.outTimeStamp = outTimeStamp;
     }
-    
+    public void setSlotId(String slotId) {
+        this.slotId = slotId;
+    }
+
 }
