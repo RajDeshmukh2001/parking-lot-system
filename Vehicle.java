@@ -19,7 +19,7 @@ public abstract class Vehicle {
     public void setRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
     }
-    public void setInTimeStamp(String inTimeStamp) {
+    public void setInTimeStamp() {
         this.inTimeStamp = java.time.LocalDateTime.now().toString();
     }
     public String getId() {
