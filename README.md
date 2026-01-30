@@ -36,9 +36,9 @@ Unparking: When a vehicle leaves, release the spot and calculate the fee.
   - Large (L)
 
 ### 3. Vehicle Types
-- Bike → Small (S)
-- Car → Medium (M), Large (L)
-- Truck → Large (L)
+- Bike → Slot Type: Small (S)
+- Car → Slot Type: Medium (M), Large (L)
+- Truck → Slot Type: Large (L)
 
 ### 4. Parking Rules
 - First Come First Serve (FCFS)
