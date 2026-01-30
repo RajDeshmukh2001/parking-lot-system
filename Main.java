@@ -26,10 +26,11 @@ public class Main {
 
                 case 3:
                     scanner.close();
+                    System.out.println("Exiting system!");
                     return;
 
                 default:
-                    System.out.println("Exiting system!");
+                    System.out.println("Invalid choice.");
                     break;
             }
 
