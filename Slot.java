@@ -17,5 +17,8 @@ public class Slot {
     public int getFloorNo() {
         return floorNo;
     }
-
+    public boolean isOccupied() {
+        return occupied;
+    }
+    
 }
