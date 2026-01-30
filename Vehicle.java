@@ -5,21 +5,10 @@ public abstract class Vehicle {
     private String outTimeStamp; 
     private String slotId; 
 
-    public void setOutTimeStamp() {
-        this.outTimeStamp = java.time.LocalDateTime.now().toString();
-    }
-    public void setSlotId(String slotId) {
-        this.slotId = slotId;
-    }
-
-    public void setId(String id) {
+    public Vehicle(String id, String registrationNumber, String slotId) {
         this.id = id;
-    }
-
-    public void setRegistrationNumber(String registrationNumber) {
         this.registrationNumber = registrationNumber;
-    }
-    public void setInTimeStamp() {
+        this.slotId = slotId;
         this.inTimeStamp = java.time.LocalDateTime.now().toString();
     }
     public String getId() {
