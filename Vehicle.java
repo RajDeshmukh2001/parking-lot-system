@@ -5,8 +5,8 @@ public abstract class Vehicle {
     private String outTimeStamp; 
     private String slotId; 
 
-    public void setOutTimeStamp(String outTimeStamp) {
-        this.outTimeStamp = outTimeStamp;
+    public void setOutTimeStamp() {
+        this.outTimeStamp = java.time.LocalDateTime.now().toString();
     }
     public void setSlotId(String slotId) {
         this.slotId = slotId;
