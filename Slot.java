@@ -11,5 +11,8 @@ public class Slot {
     public int getId() {
         return id;
     }
+    public Type getType() {
+        return type;
+    }
 
 }
