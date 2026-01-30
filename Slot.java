@@ -7,5 +7,9 @@ public class Slot {
     private int floorNo;
     private boolean occupied;
     private String vehicleId;
+    
+    public int getId() {
+        return id;
+    }
 
 }
