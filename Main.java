@@ -3,12 +3,15 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
+        System.out.println("Welcome to the Parking Lot Management System");
+
         Scanner scanner = new Scanner(System.in);
         ParkingLot parkingLot = new ParkingLot();
 
         int floors = Validator.readInt(scanner, "Enter number of Floors: ");
 
         for (int i = 1; i <= floors; i++) {
+            System.out.println();
             System.out.println("Floor " + i);
 
             int small = Validator.readInt(scanner, "Small slots: ");
@@ -27,6 +30,7 @@ public class Main {
         }
 
         while (true) {
+            System.out.println();
             System.out.println("1. Park Vehicle");
             System.out.println("2. Checkout Vehicle");
             System.out.println("3. Exit");
