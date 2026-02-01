@@ -1,8 +1,10 @@
 import java.util.Scanner;
 
 public class Validator {
+    static Scanner scanner = new Scanner(System.in);
 
-    public static int readInt(Scanner scanner, String message) {
+    public static int readInt(String message) {
+        
         int value;
         while (true) {
             System.out.print(message);

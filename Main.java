@@ -8,15 +8,15 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         ParkingLot parkingLot = new ParkingLot();
 
-        int floors = Validator.readInt(scanner, "Enter number of Floors: ");
+        int floors = Validator.readInt("Enter number of Floors: ");
 
         for (int i = 1; i <= floors; i++) {
             System.out.println();
             System.out.println("Floor " + i);
 
-            int small = Validator.readInt(scanner, "Small slots: ");
-            int medium = Validator.readInt(scanner, "Medium slots: ");
-            int large = Validator.readInt(scanner, "Large slots: ");
+            int small = Validator.readInt( "Small slots: ");
+            int medium = Validator.readInt("Medium slots: ");
+            int large = Validator.readInt("Large slots: ");
 
             for (int j = 0; j < small; j++) {
                 parkingLot.addSlot(SlotSize.SMALL, String.valueOf(i));
@@ -35,7 +35,7 @@ public class Main {
             System.out.println("2. Checkout Vehicle");
             System.out.println("3. Exit");
 
-            int choice = Validator.readInt(scanner,"Enter your choice (numbers 1 to 3): ");
+            int choice = Validator.readInt("Enter your choice (numbers 1 to 3): ");
             switch (choice) {
                 case 1:
                     // Park
