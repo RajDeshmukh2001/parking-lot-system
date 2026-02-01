@@ -1,7 +1,9 @@
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
+        ParkingLot parkingLot = new ParkingLot();
 
         System.out.println("Welcome to the Parking Lot System!");
         Scanner scanner = new Scanner(System.in);
@@ -15,13 +17,18 @@ public class Main {
             int choice = scanner.nextInt();
             scanner.nextLine();
             switch (choice) {
-                
+
                 case 1:
                     // Park
                     break;
 
                 case 2:
                     // Checkout
+                    System.out.print("Enter Vehicle Registration Number: ");
+                    String registrationNumber = scanner.nextLine();
+                    LocalDateTime exitTime = LocalDateTime.now();
+                    System.out.println("Exit time recorded: " + exitTime);
+                    parkingLot.checkoutVehicle(registrationNumber.toLowerCase(), exitTime);
                     break;
 
                 case 3:
