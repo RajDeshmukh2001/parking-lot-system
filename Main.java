@@ -16,8 +16,11 @@ public class Main {
             scanner.nextLine();
             switch (choice) {
                 
-                case 1:
-                    // Park
+                case 1: //park vehicle
+                    System.out.print("Enter vehicle type (car/bike/truck): ");
+                    String vehicleType = scanner.nextLine().trim().toLowerCase();
+
+
                     break;
 
                 case 2:
