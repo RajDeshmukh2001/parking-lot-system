@@ -5,6 +5,12 @@ public class Main {
 
         System.out.println("Welcome to the Parking Lot System!");
         Scanner scanner = new Scanner(System.in);
+        ParkingLot parkingLot = new ParkingLot();
+
+        System.out.print("Enter number of floors: ");
+        String noOfFloors = scanner.nextLine();
+
+        parkingLot.createParkingSlots(noOfFloors);
 
         while (true) {
             System.out.println("1. Park Vehicle");
