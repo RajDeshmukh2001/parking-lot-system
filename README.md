@@ -59,12 +59,18 @@ Unparking: When a vehicle leaves, release the spot and calculate the fee.
 - Slot
 - Parking Lot
 
-## Entities
+## 8. Entities
 - Vehicle
 - Slot
 
-### 8. Scope
+### 9. Scope
 - One user manages one parking lot
+
+### 10. Features
+1. Parking Lot Setup
+- Create parking lot with multiple floors
+- Configure number of slots per floor
+- Define slot types per floor (Small, Medium, Large)
 
 ## Language
 - Java (JDK 17 LTS or later)
@@ -74,6 +80,11 @@ Unparking: When a vehicle leaves, release the spot and calculate the fee.
 2. Compile the project
 3. Run the `Main` class
 4. Follow the CLI instructions
+  - Enter the number of floors
+  - For each floor:
+    - Enter the number of Small size slots
+    - Enter the number of Medium size slots
+    - Enter the number of Large size slots
 
 ## Branching strategy:
 - GitHub Flow Strategy (main branch and feature branches)

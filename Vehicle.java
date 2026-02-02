@@ -6,6 +6,7 @@ public abstract class Vehicle {
     private LocalDateTime inTimeStamp; 
     private LocalDateTime outTimeStamp; 
     private String slotId; 
+    abstract String feeCalculation(String hourlyRate);
 
     public Vehicle(String id, String registrationNumber, String slotId) {
         this.id = id;

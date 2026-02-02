@@ -4,18 +4,21 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         ParkingLotService parkingLotService = new ParkingLotService();
+        Scanner scanner = new Scanner(System.in);
 
         System.out.println("Welcome to the Parking Lot System!");
-        Scanner scanner = new Scanner(System.in);
+        ParkingLot parkingLot = new ParkingLot();
+
+        int numberOfFloors = InputValidator.readValidInt("Enter the number of floors: ");
+        parkingLot.createParkingSlots(numberOfFloors);
 
         while (true) {
             System.out.println("1. Park Vehicle");
             System.out.println("2. Checkout Vehicle");
             System.out.println("3. Exit");
-            System.out.print("Enter your choice(in numbers from 1 to 3): ");
 
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+            int choice = InputValidator.readValidInt("Enter your choice (1 to 3): ");
+
             switch (choice) {
 
                 case 1:
