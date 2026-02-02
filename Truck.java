@@ -6,13 +6,13 @@ public class Truck extends Vehicle {
         super(id, registrationNumber, slotId);
     }
     @Override
-    public String feeCalculation(String rate) {
+    public String feeCalculation(String hourlyRate) {
         if (getOutTimeStamp() == null) {
             setOutTimeStamp(LocalDateTime.now());
         }
         Duration duration = Duration.between(getInTimeStamp(), getOutTimeStamp());
         long totalMinutes = duration.toMinutes();
-        double ratePerMinute = Double.parseDouble(rate) / 60;
+        double ratePerMinute = Double.parseDouble(hourlyRate) / 60;
         int fee =  (int) Math.ceil(totalMinutes * ratePerMinute);
         return String.format("₹%d", fee);
     }
