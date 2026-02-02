@@ -3,7 +3,7 @@ import java.util.Scanner;
 public class InputValidator {
     static Scanner scanner = new Scanner(System.in);
 
-    public static int readInt(String message) {
+    public static int readValidInt(String message) {
         
         int value;
         while (true) {

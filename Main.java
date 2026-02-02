@@ -11,7 +11,7 @@ public class Main {
             System.out.println("2. Checkout Vehicle");
             System.out.println("3. Exit");
 
-            int choice = InputValidator.readInt("Enter your choice (1 to 3): ");
+            int choice = InputValidator.readValidInt("Enter your choice (1 to 3): ");
 
             switch (choice) {
                 
