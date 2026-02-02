@@ -59,12 +59,27 @@ Unparking: When a vehicle leaves, release the spot and calculate the fee.
 - Slot
 - Parking Lot
 
-## Entities
+## 8. Entities
 - Vehicle
 - Slot
 
-### 8. Scope
+### 9. Scope
 - One user manages one parking lot
+
+### 10. Features
+1. Parking Lot Setup
+- Create parking lot with multiple floors
+- Configure number of slots per floor
+- Define slot types per floor (Small, Medium, Large)
+
+2. Parking Vehicle
+- Select option `1` from the main menu
+- Choose a vehicle type: Bike, Car, or Truck
+- Enter the vehicle registration number
+- System assigns the first available compatible slot
+- Confirmation displays floor number and slot details
+- Vehicle entry time is recorded for fee calculation
+
 
 ## Language
 - Java (JDK 17 LTS or later)
@@ -87,15 +102,19 @@ Unparking: When a vehicle leaves, release the spot and calculate the fee.
   java  Main
   ```
 5. Follow the CLI instructions.
+  - Enter the number of floors
+  - For each floor:
+    - Enter the number of Small size slots
+    - Enter the number of Medium size slots
+    - Enter the number of Large size slots
 
-## Usage Instructions
 ### Parking Vehicle
 
 - Select option `1` for Parking
 -  Choose a vehicle type (Bike, Car, or Truck)
 - If a compatible slot is available, enter the vehicle registration number
 - Your vehicle will be parked and assigned a spot
-- To exit, select the unparking option and enter your registration number to pay the fee
+
 
 ## Branching strategy:
 - GitHub Flow Strategy (main branch and feature branches)

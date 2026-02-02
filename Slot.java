@@ -5,6 +5,12 @@ public class Slot {
     private boolean occupied = false;
     private String vehicleId=null;
 
+    public Slot(String id, SlotSize size, String floorNumber) {
+        this.id = id;
+        this.size = size;
+        this.floorNumber = floorNumber;
+    }
+    
     public String getId() {
         return id;
     }

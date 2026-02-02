@@ -1,10 +1,11 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("Welcome to the Parking Lot System!");
-        Scanner scanner = new Scanner(System.in);
+        ParkingLot parkingLot = new ParkingLot();
+
+        int numberOfFloors = InputValidator.readValidInt("Enter the number of floors: ");
+        parkingLot.createParkingSlots(numberOfFloors);
 
         while (true) {
             System.out.println("1. Park Vehicle");
@@ -38,7 +39,6 @@ public class Main {
                     break;
 
                 case 3:
-                    scanner.close();
                     System.out.println("Exiting system!");
                     return;
 
