@@ -17,6 +17,7 @@ public class Main {
             switch (choice) {
                 
                 case 1: //park vehicle
+
                     String vehicleType = null;
                     while (true) {
                         System.out.println("1. Car");
@@ -47,6 +48,11 @@ public class Main {
                         }
                         break;
                     }
+                    boolean slotAvailableStatus=ParkingLotService.isSlotAvailableByVehicleType(vehicleType);
+                    if(!slotAvailableStatus){
+                        System.out.println("The slot for vehicle is not available");
+                    }
+                    //validate vehicle number
 
 
                     break;
