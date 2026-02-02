@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ParkingLotService {
     ParkingLot parkingLot = new ParkingLot();
-    private List<Slot> slotList = parkingLot.getAllSlots();
+    private List<Slot> slotList = parkingLot.getAllParkingSlots();
     
     private List<Vehicle> vehicleList = new ArrayList<>();
 
@@ -55,7 +55,7 @@ public class ParkingLotService {
             break;
     }
 
-    double fee = vehicle.feeCalculation(hourlyRate);
+    String fee = vehicle.feeCalculation(String.valueOf(hourlyRate));
     printReceipt(vehicle, slot, fee);
     
     slot.setOccupied(false);
@@ -66,7 +66,7 @@ public class ParkingLotService {
     System.out.println("Vehicle checked out successfully");
 }
     
-   private void printReceipt(Vehicle vehicle, Slot slot, double fee) {
+   private void printReceipt(Vehicle vehicle, Slot slot, String fee) {
     
     System.out.println("\n            Parking Receipt");
     System.out.println("Vehicle ID: " + vehicle.getId());
