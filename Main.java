@@ -17,8 +17,40 @@ public class Main {
             switch (choice) {
                 
                 case 1: //park vehicle
+                    String vehicleType = takeVehicleTypeInput(scanner);
+                    boolean slotAvailableStatus=ParkingLotService.isSlotAvailableByVehicleType(vehicleType);
+                    if(!slotAvailableStatus){
+                        System.out.println("The slot for vehicle is not available");
+                    }
+                    else {
+                        System.out.println("The slot for vehicle is available");
+                    }
 
-                    String vehicleType = null;
+                    String vehicleRegistrationNumber=takeVehicleRegistrationNumberInput(scanner);
+                    if(vehicleRegistrationNumber.isEmpty()){
+                        System.out.println("Vehicle registration number input is empty.");
+                        break;
+                    }
+                    break;
+
+                case 2:
+                    // Checkout
+                    break;
+
+                case 3:
+                    scanner.close();
+                    System.out.println("Exiting system!");
+                    return;
+
+                default:
+                    System.out.println("Invalid choice.");
+                    break;
+            }
+
+        }
+    }
+    private static String takeVehicleTypeInput(Scanner scanner) {
+        String vehicleType="";
                     while (true) {
                         System.out.println("1. Car");
                         System.out.println("2. Bike");
@@ -48,40 +80,21 @@ public class Main {
                         }
                         break;
                     }
-                    boolean slotAvailableStatus=ParkingLotService.isSlotAvailableByVehicleType(vehicleType);
-                    if(!slotAvailableStatus){
-                        System.out.println("The slot for vehicle is not available");
-                    }
-                    else {
-                        System.out.println("The slot for vehicle is available");
-                    }
-
-                    String vehicleRegistrationNumber=null;
-                    System.out.print("Enter vehicle registration number: ");
-                    vehicleRegistrationNumber = scanner.nextLine();
-                    while (!InputValidator.isValidVehicleRegistrationNumber(vehicleRegistrationNumber)) {
-                        System.out.print("Invalid vehicle registration number format.\nValid Indian vehicle registration number format is: <state code(2 Alphabets)>-<RTO code(2 digits)>-<series(1 or 2 Alphabets)>-<number(4 digits)>.\nPlease enter again:  ");
-                        vehicleRegistrationNumber = scanner.nextLine();
-                    }
-
-
-
-                    break;
-
-                case 2:
-                    // Checkout
-                    break;
-
-                case 3:
-                    scanner.close();
-                    System.out.println("Exiting system!");
-                    return;
-
-                default:
-                    System.out.println("Invalid choice.");
-                    break;
+        return vehicleType;
+    }
+    private static String takeVehicleRegistrationNumberInput(Scanner scanner) {
+        String vehicleRegistrationNumber;
+        while (true) {
+            System.out.print("Enter vehicle registration number: ");
+            vehicleRegistrationNumber = scanner.nextLine().trim().toUpperCase();
+            boolean isValidVehicleRegistrationNumber = InputValidator.isValidVehicleRegistrationNumber(vehicleRegistrationNumber);
+            if (!isValidVehicleRegistrationNumber) {
+                System.out.println("Invalid vehicle registration number! Please try again.");
+                System.out.println("Valid format <state code> <rto code> <two alphabets> <four digits> e.g., KA 01 AB 1234");
+            } else {
+                break;
             }
-
         }
+        return vehicleRegistrationNumber;
     }
 }
