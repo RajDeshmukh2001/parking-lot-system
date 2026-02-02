@@ -17,8 +17,36 @@ public class Main {
             switch (choice) {
                 
                 case 1: //park vehicle
-                    System.out.print("Enter vehicle type (car/bike/truck): ");
-                    String vehicleType = scanner.nextLine().trim().toLowerCase();
+                    String vehicleType = null;
+                    while (true) {
+                        System.out.println("1. Car");
+                        System.out.println("2. Bike");
+                        System.out.println("3. Truck");
+                        System.out.println("4. Back to Main Menu");
+                        System.out.print("Enter vehicle type (1-4): ");
+                        String vehicleTypeMenuOption = scanner.nextLine().trim();
+                        switch (vehicleTypeMenuOption) {
+                            case "1": 
+                                System.out.println("Car selected.");
+                                vehicleType="car";
+                                break;
+                            case "2":
+                                System.out.println("Bike selected.");
+                                vehicleType="bike";
+                                break;
+                            case "3":
+                                System.out.println("Truck selected.");
+                                vehicleType="truck";
+                                break;
+                            case "4":
+                                System.out.println("Returning to Main Menu.");
+                                break;
+                            default:
+                                System.out.println("Invalid vehicle type! Please try again.");
+                                continue;
+                        }
+                        break;
+                    }
 
 
                     break;
