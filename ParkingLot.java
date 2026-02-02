@@ -1,10 +1,8 @@
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Scanner;
 import java.util.UUID;
 
 public class ParkingLot {
-    Scanner sc = new Scanner(System.in);
     List<Slot> slots = new ArrayList<>();
 
     public void createParkingSlots(int numberOfFloors) {

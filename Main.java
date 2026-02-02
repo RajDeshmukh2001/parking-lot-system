@@ -1,10 +1,7 @@
-import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
         System.out.println("Welcome to the Parking Lot System!");
-        Scanner scanner = new Scanner(System.in);
         ParkingLot parkingLot = new ParkingLot();
 
         int numberOfFloors = InputValidator.readValidInt("Enter the number of floors: ");
@@ -28,7 +25,6 @@ public class Main {
                     break;
 
                 case 3:
-                    scanner.close();
                     System.out.println("Exiting system!");
                     return;
 
