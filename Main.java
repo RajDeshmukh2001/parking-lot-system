@@ -27,7 +27,6 @@ public class Main {
                     System.out.print("Enter Vehicle Registration Number: ");
                     String registrationNumber = scanner.nextLine();
                     LocalDateTime exitTime = LocalDateTime.now();
-                    System.out.println("Exit time recorded: " + exitTime);
                     parkingLot.checkoutVehicle(registrationNumber.toLowerCase(), exitTime);
                     break;
 
