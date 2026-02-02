@@ -31,4 +31,8 @@ public class ParkingLot {
             }
         }
     }
+
+    public List<Slot> getAllParkingSlots() { 
+        return slots; 
+    }
 }
