@@ -24,10 +24,19 @@ public class Main {
 
                 case 2:
                     ///checkout
-                    System.out.print("Enter Vehicle Registration Number: ");
-                    String registrationNumber = scanner.nextLine();
+                    System.out.print("Enter Vehicle Registration Number (e.g. KA01AB1234): ");
+                    String registrationNumber = scanner.nextLine().trim().toUpperCase();
+
+                    if (registrationNumber.isEmpty()) {
+                        System.out.println("Registration number cannot be empty");
+                        break;
+                    }
+                    if (!registrationNumber.matches("[A-Z]{2}[0-9]{2}[A-Z]{2}[0-9]{4}")) {
+                        System.out.println("Invalid registration number format. Example: KA01AB1234");
+                        break;
+                    }
                     LocalDateTime exitTime = LocalDateTime.now();
-                    parkingLotService.checkoutVehicle(registrationNumber.toLowerCase(), exitTime);
+                    parkingLotService.checkoutVehicle(registrationNumber, exitTime);
                     break;
 
                 case 3:
