@@ -52,7 +52,18 @@ public class Main {
                     if(!slotAvailableStatus){
                         System.out.println("The slot for vehicle is not available");
                     }
-                    //validate vehicle number
+                    else {
+                        System.out.println("The slot for vehicle is available");
+                    }
+
+                    String vehicleRegistrationNumber=null;
+                    System.out.print("Enter vehicle registration number: ");
+                    vehicleRegistrationNumber = scanner.nextLine();
+                    while (!InputValidator.isValidVehicleRegistrationNumber(vehicleRegistrationNumber)) {
+                        System.out.print("Invalid vehicle registration number format.\nValid Indian vehicle registration number format is: <state code(2 Alphabets)>-<RTO code(2 digits)>-<series(1 or 2 Alphabets)>-<number(4 digits)>.\nPlease enter again:  ");
+                        vehicleRegistrationNumber = scanner.nextLine();
+                    }
+
 
 
                     break;
