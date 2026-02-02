@@ -34,10 +34,7 @@ public class ParkingLotService {
     }
 
     public static void parkVehicle(String vehicleType, String vehicleRegistrationNumber) {
-        //first the first available slot for the vehicle type is found
-        //the first floor slots will be checked first and filled and so does for other floors
         List<Slot> slots=parkingLot.getAllParkingSlots();
-        //the slots is alread sorted by floor number while creating parking lot
         
         for(Slot slot:slots) {
             if(!slot.isOccupied()) {
