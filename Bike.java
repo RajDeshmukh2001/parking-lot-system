@@ -5,15 +5,14 @@ public class Bike extends Vehicle {
      public Bike(String id, String registrationNumber, String slotId) {
         super(id, registrationNumber, slotId);
     }
-    private static final double RATE_PER_HOUR = 100.0;
     @Override
-    public String feeCalculation() {
+    public String feeCalculation(String rate){
         if (getOutTimeStamp() == null) {
             setOutTimeStamp(LocalDateTime.now());
         }
         Duration duration = Duration.between(getInTimeStamp(), getOutTimeStamp());
         long totalMinutes = duration.toMinutes();
-        double ratePerMinute = RATE_PER_HOUR / 60;
+        double ratePerMinute = Double.parseDouble(rate) / 60.0;
         int fee = (int) (totalMinutes * ratePerMinute);
         return String.format("₹%d", fee);
     }
