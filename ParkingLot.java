@@ -14,4 +14,9 @@ public class ParkingLot {
         vehicleList.add(car);
         slot.setVehicleId(car.getId());
     }
+    public void parkVehicleInSlot(Truck truck, Slot slot) {
+        slot.setOccupied(true);
+        vehicleList.add(truck);
+        slot.setVehicleId(truck.getId());
+    }
 }
