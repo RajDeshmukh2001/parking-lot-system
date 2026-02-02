@@ -8,7 +8,7 @@ public class Main {
         ParkingLot parkingLot = new ParkingLot();
 
         System.out.print("Enter number of floors: ");
-        String noOfFloors = scanner.nextLine();
+        int noOfFloors = InputValidator.readValidInt("Enter the number of floors: ");
 
         parkingLot.createParkingSlots(noOfFloors);
 
