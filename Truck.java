@@ -13,7 +13,7 @@ public class Truck extends Vehicle {
         Duration duration = Duration.between(getInTimeStamp(), getOutTimeStamp());
         long totalMinutes = duration.toMinutes();
         double ratePerMinute = Double.parseDouble(rate) / 60;
-        int fee = (int) (totalMinutes * ratePerMinute);
+        int fee =  (int) Math.ceil(totalMinutes * ratePerMinute);
         return String.format("₹%d", fee);
     }
 }
