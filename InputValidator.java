@@ -31,4 +31,13 @@ public class InputValidator {
         }
         return value;
     }
+
+    public static boolean isVehicleAlreadyParked(ParkingLot parkingLot, String vehicleRegistrationNumber) {
+        for (Vehicle vehicle : parkingLot.vehicleList) {
+            if (vehicle.getRegistrationNumber().equalsIgnoreCase(vehicleRegistrationNumber)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

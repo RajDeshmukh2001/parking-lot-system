@@ -37,7 +37,10 @@ public class Main {
                         System.out.println("Vehicle registration number input is empty.");
                         break;
                     }
-                    // Updated to call instance method and pass parkingLot
+                    if (InputValidator.isVehicleAlreadyParked(parkingLot, vehicleRegistrationNumber)) {
+                        System.out.println("Vehicle with registration number " + vehicleRegistrationNumber + " is already parked.");
+                        break;
+                    }
                     parkingLotService.parkVehicle(parkingLot, vehicleType, vehicleRegistrationNumber);
                     break;
 
