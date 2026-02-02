@@ -2,8 +2,13 @@ public class Slot {
     private String id;
     private SlotSize size;
     private String floorNumber;
-    private boolean occupied;
-    private String vehicleId;
+    private boolean occupied=false;
+    private String vehicleId=null;
+    public Slot(String id, SlotSize size, String floorNumber) {
+        this.id = id;
+        this.size = size;
+        this.floorNumber = floorNumber;
+    }
     
     public String getId() {
         return id;
