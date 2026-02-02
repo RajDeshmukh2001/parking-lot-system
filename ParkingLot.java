@@ -7,24 +7,24 @@ public class ParkingLot {
     Scanner sc = new Scanner(System.in);
     List<Slot> slots = new ArrayList<>();
 
-    public void createParkingSlots(int noOfFloors) {
-        for (int i = 1; i <= noOfFloors; i++) {
-            int smallSlots = InputValidator.readValidInt("Enter number of Small size slots for " + i + " floor: ");
-            for (int j = 0; j < smallSlots; j++) {
+    public void createParkingSlots(int numberOfFloors) {
+        for (int floorNumber = 1; floorNumber <= numberOfFloors; floorNumber++) {
+            int smallSlotCount = InputValidator.readValidInt("Enter number of Small size slots for " + floorNumber + " floor: ");
+            for (int slotIndex = 0; slotIndex < smallSlotCount; slotIndex++) {
                 String id = UUID.randomUUID().toString();
-                slots.add(new Slot(id, SlotSize.SMALL, String.valueOf(i)));
+                slots.add(new Slot(id, SlotSize.SMALL, String.valueOf(floorNumber)));
             }
 
-            int mediumSlots = InputValidator.readValidInt("Enter number of Medium size slots for " + i + " floor: ");
-            for (int j = 0; j < mediumSlots; j++) {
+            int mediumSlotCount = InputValidator.readValidInt("Enter number of Medium size slots for " + floorNumber + " floor: ");
+            for (int slotIndex = 0; slotIndex < mediumSlotCount; slotIndex++) {
                 String id = UUID.randomUUID().toString();
-                slots.add(new Slot(id, SlotSize.MEDIUM, String.valueOf(i)));
+                slots.add(new Slot(id, SlotSize.MEDIUM, String.valueOf(floorNumber)));
             }
 
-            int largeSlots = InputValidator.readValidInt("Enter number of Large size slots for " + i + " floor: ");
-            for (int j = 0; j < largeSlots; j++) {
+            int largeSlotCount = InputValidator.readValidInt("Enter number of Large size slots for " + floorNumber + " floor: ");
+            for (int slotIndex = 0; slotIndex < largeSlotCount; slotIndex++) {
                 String id = UUID.randomUUID().toString();
-                slots.add(new Slot(id, SlotSize.LARGE, String.valueOf(i)));
+                slots.add(new Slot(id, SlotSize.LARGE, String.valueOf(floorNumber)));
             }
         }
     }

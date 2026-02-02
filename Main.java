@@ -7,10 +7,8 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         ParkingLot parkingLot = new ParkingLot();
 
-        System.out.print("Enter number of floors: ");
-        int noOfFloors = InputValidator.readValidInt("Enter the number of floors: ");
-
-        parkingLot.createParkingSlots(noOfFloors);
+        int numberOfFloors = InputValidator.readValidInt("Enter the number of floors: ");
+        parkingLot.createParkingSlots(numberOfFloors);
 
         while (true) {
             System.out.println("1. Park Vehicle");
