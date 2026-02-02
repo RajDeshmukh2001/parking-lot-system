@@ -3,7 +3,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        ParkingLot parkingLot = new ParkingLot();
+        ParkingLotService parkingLotService = new ParkingLotService();
 
         System.out.println("Welcome to the Parking Lot System!");
         Scanner scanner = new Scanner(System.in);
@@ -27,7 +27,7 @@ public class Main {
                     System.out.print("Enter Vehicle Registration Number: ");
                     String registrationNumber = scanner.nextLine();
                     LocalDateTime exitTime = LocalDateTime.now();
-                    parkingLot.checkoutVehicle(registrationNumber.toLowerCase(), exitTime);
+                    parkingLotService.checkoutVehicle(registrationNumber.toLowerCase(), exitTime);
                     break;
 
                 case 3:

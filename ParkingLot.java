@@ -6,7 +6,7 @@ import java.util.UUID;
 public class ParkingLot {
     private List<Slot> slotList = new ArrayList<>();
     private List<Vehicle> vehicleList = new ArrayList<>();
-    //private FeeCalculator feeCalculator = new FeeCalculator();
+    
 
     public void addSlot(SlotSize size, String floorNumber) {
         Slot slot = new Slot();
@@ -51,13 +51,8 @@ public class ParkingLot {
         return;
     }
     
-    // double fee = feeCalculator.calculateParkingFee(
-    //     vehicle.getInTimeStamp(), 
-    //     vehicle.getOutTimeStamp(), 
-    //     slot.getSize()
-    // );
-    
-    double fee = vehicle.calculateFee(slot.getSize());
+
+    double fee = vehicle.feeCalculation();
     printReceipt(vehicle, slot, fee);
     
     slot.setOccupied(false);
