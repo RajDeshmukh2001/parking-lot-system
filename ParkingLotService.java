@@ -3,6 +3,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ParkingLotService {
+    ParkingLot parkingLot = new ParkingLot();
+    private List<Slot> slotList = parkingLot.getAllSlots();
     
     private List<Vehicle> vehicleList = new ArrayList<>();
 
@@ -12,7 +14,7 @@ public class ParkingLotService {
                 return vehicle;
             }
         }
-        return null;
+        return null;    
     }
    public void checkoutVehicle(String registrationNumber, LocalDateTime exitTime) {
     
@@ -36,7 +38,7 @@ public class ParkingLotService {
     }
     
     if (slot == null) {
-        System.out.println("Error: Slot not found");
+        System.out.println("Slot not found");
         return;
     }
 
@@ -66,7 +68,7 @@ public class ParkingLotService {
     
    private void printReceipt(Vehicle vehicle, Slot slot, double fee) {
     
-    System.out.println("\nParking Receipt");
+    System.out.println("\n            Parking Receipt");
     System.out.println("Vehicle ID: " + vehicle.getId());
     System.out.println("VehicleRegistration Number: " + vehicle.getRegistrationNumber());
     System.out.println("Slot: " + slot.getId());
