@@ -26,9 +26,6 @@ public class Slot {
     public void setOccupied(boolean occupied) {
         this.occupied = occupied;
     }
-    public void setId(String id) {
-        this.id = id;
-    }
     public void setFloorNumber(String floorNumber) {
         this.floorNumber = floorNumber;
     }
