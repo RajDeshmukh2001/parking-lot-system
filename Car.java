@@ -1,5 +1,5 @@
 public class Car extends Vehicle {
-    public Car(String id, String registrationNumber, String slotId) {
-        super(id, registrationNumber, slotId);
+    public Car(String registrationNumber, String slotId) {
+        super(registrationNumber, slotId);
     }
 }
