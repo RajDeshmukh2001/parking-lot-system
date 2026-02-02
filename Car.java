@@ -2,8 +2,8 @@ import java.time.Duration;
 import java.time.LocalDateTime;
 
 public class Car extends Vehicle {
-    public Car(String id, String registrationNumber, String slotId) {
-        super(id, registrationNumber, slotId);
+    public Car(String registrationNumber, String slotId) {
+        super(registrationNumber, slotId);
     }
     @Override
     public String feeCalculation(String hourlyRate){

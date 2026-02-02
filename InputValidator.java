@@ -1,7 +1,15 @@
 import java.util.Scanner;
 
 public class InputValidator {
+
     static Scanner scanner = new Scanner(System.in);
+    
+    public static boolean isValidVehicleRegistrationNumber(String vehicleNumber) {
+        //for indian vehicle number validation
+        vehicleNumber=vehicleNumber.trim().toUpperCase();
+        String vehicleNumberPattern = "^[A-Z]{2}\\s?[0-9]{1,2}\\s?[A-Z]{1,2}\\s?[0-9]{3,4}$";
+        return vehicleNumber.matches(vehicleNumberPattern);
+    }
 
     /**
      * Prompts the user until a valid integer is entered.
@@ -22,5 +30,14 @@ public class InputValidator {
             }
         }
         return value;
+    }
+
+    public static boolean isVehicleAlreadyParked(ParkingLot parkingLot, String vehicleRegistrationNumber) {
+        for (Vehicle vehicle : parkingLot.vehicleList) {
+            if (vehicle.getRegistrationNumber().equalsIgnoreCase(vehicleRegistrationNumber)) {
+                return true;
+            }
+        }
+        return false;
     }
 }

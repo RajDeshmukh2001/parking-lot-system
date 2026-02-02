@@ -1,18 +1,21 @@
 import java.time.LocalDateTime;
 
+import static java.util.UUID.randomUUID;
+
 public abstract class Vehicle {
-    private String id;
+    private String id= randomUUID().toString();
     private String registrationNumber; 
     private LocalDateTime inTimeStamp; 
     private LocalDateTime outTimeStamp; 
     private String slotId; 
     abstract String feeCalculation(String hourlyRate);
 
-    public Vehicle(String id, String registrationNumber, String slotId) {
-        this.id = id;
+    public Vehicle(String registrationNumber, String slotId) {
+        this.id = randomUUID().toString();
         this.registrationNumber = registrationNumber;
         this.slotId = slotId;
         this.inTimeStamp = LocalDateTime.now();
+        this.outTimeStamp = null;
     }
     public void setOutTimeStamp(LocalDateTime outTimeStamp) {
         this.outTimeStamp = outTimeStamp;
