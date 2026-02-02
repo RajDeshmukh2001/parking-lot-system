@@ -70,10 +70,32 @@ Unparking: When a vehicle leaves, release the spot and calculate the fee.
 - Java (JDK 17 LTS or later)
 
 ## How to run the program
-1. Clone the repository
-2. Compile the project
-3. Run the `Main` class
-4. Follow the CLI instructions
+1. Clone the repository:
+  ```bash
+  git clone https://github.com/RajDeshmukh2001/parking-lot-system.git
+  ```
+2. Navigate to the project directory:
+  ```bash
+  cd parking-lot-system
+  ```
+3. Compile the project:
+  ```bash
+  javac *.java
+  ```
+4. Run the `Main` class:
+  ```bash
+  java  Main
+  ```
+5. Follow the CLI instructions.
+
+## Usage Instructions
+### Parking Vehicle
+
+- Select option `1` for Parking
+-  Choose a vehicle type (Bike, Car, or Truck)
+- If a compatible slot is available, enter the vehicle registration number
+- Your vehicle will be parked and assigned a spot
+- To exit, select the unparking option and enter your registration number to pay the fee
 
 ## Branching strategy:
 - GitHub Flow Strategy (main branch and feature branches)
