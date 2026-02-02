@@ -1,21 +1,10 @@
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
-public class ParkingLot {
-    private List<Slot> slotList = new ArrayList<>();
-    private List<Vehicle> vehicleList = new ArrayList<>();
+public class ParkingLotService {
     
-
-    public void addSlot(SlotSize size, String floorNumber) {
-        Slot slot = new Slot();
-        slot.setId(UUID.randomUUID().toString());
-        slot.setSize(size);
-        slot.setFloorNumber(floorNumber);
-        slot.setOccupied(false);
-        slotList.add(slot);
-    }
+    private List<Vehicle> vehicleList = new ArrayList<>();
 
     public Vehicle findVehicleByRegistration(String registrationNumber) {
         for (Vehicle vehicle : vehicleList) {
@@ -50,9 +39,21 @@ public class ParkingLot {
         System.out.println("Error: Slot not found");
         return;
     }
-    
 
-    double fee = vehicle.feeCalculation();
+    double hourlyRate = 0;
+    switch (slot.getSize()) {
+        case SMALL:
+            hourlyRate = 100;
+            break;
+        case MEDIUM:
+            hourlyRate = 200;
+            break;
+        case LARGE:
+            hourlyRate = 300;
+            break;
+    }
+
+    double fee = vehicle.feeCalculation(hourlyRate);
     printReceipt(vehicle, slot, fee);
     
     slot.setOccupied(false);
