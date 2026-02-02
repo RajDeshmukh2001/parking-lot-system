@@ -9,4 +9,9 @@ public class ParkingLot {
         vehicleList.add(bike);
         slot.setVehicleId(bike.getId());
     }
+    public void parkVehicleInSlot(Car car, Slot slot) {
+        slot.setOccupied(true);
+        vehicleList.add(car);
+        slot.setVehicleId(car.getId());
+    }
 }
