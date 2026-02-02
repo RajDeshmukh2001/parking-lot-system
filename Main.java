@@ -31,6 +31,7 @@ public class Main {
                         System.out.println("Vehicle registration number input is empty.");
                         break;
                     }
+                    ParkingLotService.parkVehicle(vehicleType, vehicleRegistrationNumber);
                     break;
 
                 case 2:
