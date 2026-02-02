@@ -10,10 +10,9 @@ public class Main {
             System.out.println("1. Park Vehicle");
             System.out.println("2. Checkout Vehicle");
             System.out.println("3. Exit");
-            System.out.print("Enter your choice(in numbers from 1 to 3): ");
 
-            int choice = scanner.nextInt();
-            scanner.nextLine();
+            int choice = InputValidator.readValidInt("Enter your choice (1 to 3): ");
+
             switch (choice) {
                 
                 case 1: //park vehicle
